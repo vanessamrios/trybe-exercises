@@ -1,0 +1,13 @@
+<img src="images/IMG_0568.jpg" width="300px" alt="Vanessa em abril de 2021">
+    <h2>Quem sou eu:</h2>
+        <p>Assistente Social, apaixonada por justiça social, em transição de carreira para a tecnologia. Hoje sou uma estudante de Desenvolvimento de Software empolgada com front end e orgulhosa dos primeiros passos que tenho dado rumo a nova carreira.
+            Ao longo de anos de experiência como Assistente Social desenvolvi e aprimorei importantes soft skills como liderança, trabalho em grupo e comunicação e agora sigo entusiasmada desenvolvendo as technical skills necessárias para ser Desenvolvedora.
+            </p>
+    <h2>Minhas habilidades:</h2>
+    <ul>
+        <li><strong>Comunicação</strong></li>
+        <li>Facilitação</li>
+        <li>Fast Learning</li>
+        <li>liderança</li>
+        <li>Technical skills em Desenvolvimento</li>
+    </ul>
