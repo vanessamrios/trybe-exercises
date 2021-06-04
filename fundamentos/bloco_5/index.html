@@ -97,6 +97,20 @@
        }
 
         maiusculo ();
+        
+        //EXERCÍCIO 6
+
+        function exibeNoConsole () {
+            let conteudoTagP = document.getElementsByTagName("p");
+            
+            for(let conteudo in conteudoTagP) {
+               console.log(conteudoTagP[conteudo].innerText);
+           }
+       
+        }
+        exibeNoConsole ();
+
+
 
 
     </script>
