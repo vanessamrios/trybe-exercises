@@ -102,7 +102,22 @@
 
       //exercício 08
 
-      
+      let elementoUL = document.createElement("ul");
+      tagdiv4.appendChild(elementoUL);
+
+      let listaDeNumeros = ["um", "dois", "três", "quatro", "cinco", "seis", "sete", "oito", "nove", "dez"];
+
+      for(let index of listaDeNumeros) {
+          let numero = listaDeNumeros[index];
+
+          let itemDaListaDeNumeros = document.createElement("li");
+          itemDaListaDeNumeros.innerText = index;
+
+          elementoUL.appendChild(itemDaListaDeNumeros);
+
+      }
+
+
     </script>
   </body>
 </html>
