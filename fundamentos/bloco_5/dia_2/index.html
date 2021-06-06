@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      div {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+
+      //PARTE 1
+
+      // exercício 01
+
+      let tagh1 = document.createElement("h1");
+      document.body.appendChild(tagh1);
+      tagh1.innerHTML = "Exercício 5.2 - JavaScript DOM";
+
+      // exercício 02
+
+      let tagdiv = document.createElement("div");
+      document.body.appendChild(tagdiv);
+      tagdiv.classList.add("main-content");
+
+      // exercício 03
+
+      let tagdiv2 = document.createElement("div");
+      tagdiv.appendChild(tagdiv2);
+      tagdiv2.classList.add("center-content");
+
+      // exercício 04
+
+      let tagp = document.createElement("p");
+      tagdiv2.appendChild(tagp);
+      tagp.innerHTML = "A vida é feita de coragem."
+
+      // exercício 05
+
+      let tagdiv3 = document.createElement("div");
+      tagdiv.appendChild(tagdiv3);
+      tagdiv3.classList.add("left-content");
+
+      //exercício 06
+
+      let tagdiv4 = document.createElement("div");
+      tagdiv.appendChild(tagdiv4);
+      tagdiv4.classList.add("right-content");
+
+      //exercício 07
+
+      let imagem = document.createElement("img");
+      tagdiv3.appendChild(imagem);
+      imagem.src = "https://picsum.photos/200";
+      imagem.classList.add("small-image");
+
+      //exercício 08
+
+      let elementoUL = document.createElement("ul");
+      tagdiv4.appendChild(elementoUL);
+
+      let listaDeNumeros = ["um", "dois", "três", "quatro", "cinco", "seis", "sete", "oito", "nove", "dez"];
+
+      for(let index of listaDeNumeros) {
+          let numero = listaDeNumeros[index];
+
+          let itemDaListaDeNumeros = document.createElement("li");
+          itemDaListaDeNumeros.innerText = index;
+
+          elementoUL.appendChild(itemDaListaDeNumeros);
+      }
+
+      //exercício 09
+      for(let index = 1; index <= 3; index+=1){
+          let tagh3 = document.createElement("h3");
+          tagdiv.appendChild(tagh3);
+      }
+      
+
+      //PARTE 2
+
+      //exercício 1
+
+      tagh1.classList.add("title");
+
+      //exercício 2
+      tagsh3 = document.getElementsByTagName("h3")
+      
+      for(let tag of tagsh3){
+          tag.classList.add("description");
+      }
+
+      //exercício 3
+
+      tagdiv.removeChild(tagdiv3);
+
+      //exercício 4
+
+      tagdiv4.style.marginRight="auto"
+
+      //exercício 5
+      
+      tagdiv.style.backgroundColor="green"
+
+      //exercício 6
+
+     elementoUL.lastChild.remove();
+     elementoUL.lastChild.remove();
+
+
+    </script>
+  </body>
+</html>
