@@ -98,3 +98,16 @@ function createDaysOfTheWeek() {
   function deszoom (event) {
     event.target.style.fontSize = "20px"
   }
+
+  function addNewTask (NewTask){
+    let task = document.createElement("span");
+    let mytasks = document.querySelector(".my-tasks")
+    mytasks.appendChild(task);
+    task.innerHTML=NewTask
+  }
+
+  addNewTask ("Cozinhar");
+
+  
+
+    
