@@ -145,7 +145,7 @@ function createDaysOfTheWeek() {
         if(event.target.style.color === selected[0].style.backgroundColor){
           event.target.style.color = "rgb(119,119,119)"
         } else {
-          event.target.style.color = "yellow"
+          event.target.style.color = selected[0].style.backgroundColor
         }
       }
     }
