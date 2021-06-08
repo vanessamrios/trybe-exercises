@@ -112,11 +112,26 @@ function createDaysOfTheWeek() {
     let caption = document.createElement("div");
     let mytasks = document.querySelector(".my-tasks")
     mytasks.appendChild(caption);
+    caption.id = "caption"
     caption.style.backgroundColor=cor
   }
 
   addCaption("yellow");
-  
+
+  function taskSelected () {
+    let caption = document.getElementById("caption");
+    caption.addEventListener("click", addClassTaskSelected)
+      function addClassTaskSelected (){
+        caption.classList.add("task")
+        if(caption.classList.contains("selected") === true){
+          caption.classList.remove("selected")
+        }else{
+          caption.classList.add("selected")
+        }
+    }
+  }
+
+  taskSelected ();
   
 
     
