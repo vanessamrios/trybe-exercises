@@ -132,6 +132,27 @@ function createDaysOfTheWeek() {
   }
 
   taskSelected ();
+
+  function changeColorOfTheDay (){
+    let days = document.getElementsByClassName("day");
+    for(let day of days){
+      day.addEventListener("click", changeColor)
+      function changeColor (event) {
+        let selected = document.getElementsByClassName("selected")
+        if(selected.length === 0){
+          return
+        }
+        if(event.target.style.color === selected[0].style.backgroundColor){
+          event.target.style.color = "rgb(119,119,119)"
+        } else {
+          event.target.style.color = "yellow"
+        }
+      }
+    }
+  }
+
+  changeColorOfTheDay();
+
   
 
     
