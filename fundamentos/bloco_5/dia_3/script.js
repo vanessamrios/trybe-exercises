@@ -49,3 +49,20 @@ function createDaysOfTheWeek() {
   }
 
   createButtonHoliday("Feriados");
+
+  let buttonHoliday = document.getElementById("btn-holiday");
+  
+  buttonHoliday.addEventListener("click", changeColorOfHolidays)
+  function changeColorOfHolidays (){
+    let holidays = document.getElementsByClassName("holiday")
+    for(let holiday of holidays){
+      if(holiday.style.backgroundColor === "black"){
+        holiday.style.backgroundColor="rgb(238, 238, 238)"
+      }else{
+        holiday.style.backgroundColor="black"
+      }
+    }
+  }
+  
+
+
