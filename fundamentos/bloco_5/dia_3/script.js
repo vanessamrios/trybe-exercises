@@ -108,6 +108,15 @@ function createDaysOfTheWeek() {
 
   addNewTask ("Cozinhar");
 
+  function addCaption (cor) {
+    let caption = document.createElement("div");
+    let mytasks = document.querySelector(".my-tasks")
+    mytasks.appendChild(caption);
+    caption.style.backgroundColor=cor
+  }
+
+  addCaption("yellow");
+  
   
 
     
