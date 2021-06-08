@@ -29,8 +29,8 @@ function createDaysOfTheWeek() {
         dayOfMonth.classList.add("holiday");
       }
 
-      if(day === 4 || day === 11 || day === 18 || day === 31){
-        dayOfMonth.classList.add("fryday");
+      if(day === 4 || day === 11 || day === 18 || day === 25){
+        dayOfMonth.classList.add("friday");
       }
     }
   }
@@ -38,22 +38,19 @@ function createDaysOfTheWeek() {
   createDaysOfTheMonth();
 
   function createButtonHoliday (buttonName) {
-
     let buttonHoliday = document.createElement("button");
     let buttonsContainer = document.querySelector(".buttons-container");
+    
     buttonsContainer.appendChild(buttonHoliday);
     buttonHoliday.id = "btn-holiday";
-
     buttonHoliday.innerHTML = buttonName
-        
   }
 
   createButtonHoliday("Feriados");
 
   let buttonHoliday = document.getElementById("btn-holiday");
-  
   buttonHoliday.addEventListener("click", changeColorOfHolidays)
-  function changeColorOfHolidays (){
+    function changeColorOfHolidays (){
     let holidays = document.getElementsByClassName("holiday")
     for(let holiday of holidays){
       if(holiday.style.backgroundColor === "black"){
@@ -62,6 +59,29 @@ function createDaysOfTheWeek() {
         holiday.style.backgroundColor="black"
       }
     }
+  }
+
+  function createButtonFriday (buttonName) {
+    let buttonFriday = document.createElement("button");
+    let buttonsContainer = document.querySelector(".buttons-container");
+    buttonsContainer.appendChild(buttonFriday);
+    buttonFriday.id = "btn-friday";
+    buttonFriday.innerHTML = buttonName    
+  }
+  createButtonFriday("Sexta-feira");
+
+  let buttonFriday = document.getElementById("btn-friday");
+  
+  buttonFriday.addEventListener("click", changeTextOfFridays)
+  function changeTextOfFridays (){
+    let fridays = document.getElementsByClassName("friday")
+    for(let friday of fridays){
+      if(friday.innerText === "SEXTOU"){
+        friday.innerText= (friday.nextElementSibling.innerText -1)
+      } else {
+        friday.innerText = "SEXTOU"
+      }
+      }
   }
   
 
