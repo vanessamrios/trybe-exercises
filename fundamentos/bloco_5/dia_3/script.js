@@ -84,5 +84,17 @@ function createDaysOfTheWeek() {
       }
   }
   
+  let dias = document.getElementsByClassName("day")
+  for(let dia of dias){
+      dia.addEventListener("mouseover", zoom)
+  }
+  function zoom (event) {
+    event.target.style.fontSize = "30px"
+  }
 
-
+   for(let dia of dias){
+      dia.addEventListener("mouseleave", deszoom)
+  }
+  function deszoom (event) {
+    event.target.style.fontSize = "20px"
+  }
