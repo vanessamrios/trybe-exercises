@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Cadastre aqui o seu currículo</h1>
+        <p>Preencha os campos abaixo:</p>
+    </header>
+    <main> 
+        <form action="" method="get" id="resume-form">
+            <fieldset id="personal-data">
+                <legend>Dado Pesoais</legend>
+
+                <label for="name">Nome:
+                    <input type="text" name="name" id="name" placeholder="Digite seu nome" maxlength="40" required>
+                </label>
+                    
+                <label for="email">E-mail:
+                    <input type="email" name="email" id="email" placeholder="Digite seu e-mail" maxlength="50" required>
+                </label>
+                    
+                <label for="cpf">CPF:
+                    <input type="text" name="cpf" id="cpf" placeholder="somente números" maxlength="11" required>
+                </label>
+                    
+                <label for="adress">Endereço:
+                    <input type="text" name="adress" id="adress" placeholder="Digite aqui seu endereçco" maxlength="200" required>
+                </label>
+                    
+                <label for="city">Cidade:
+                    <input type="text" name="city" id="city" placeholder="Digite aqui sua cidade" maxlength="28" required>
+                </label>
+                    
+                <label for="state">Estado:
+                    <select name="state" id="state" required>
+                        <option disabled selected value>Selecione um estado</option>
+                    </select>
+                </label>
+                <br>
+                <p>Tipo de Imóvel:</p>
+                <label for="typeofpropety"> 
+                    <input type="radio" name="typeofpropety" id="typeofpropety1" value="casa" required>Casa
+                </label>
+                <label for="typeofpropety2"> 
+                    <input type="radio" name="typeofpropety" id="typeofpropety2" value="apartamento" required>Apartamento
+                </label>  
+            </fieldset>
+            <fieldset id="last-job">
+            <legend>Sobre seu último emprego</legend>
+            
+            <label for="resume">Resumo:
+                <textarea name="resume" id="resume" placeholder="Resuma sua experiência em 1000 caracteres" maxlength="1000" cols="100" rows="20" required></textarea>
+            </label> 
+            <br>
+            <label for="position">Cargo:
+                <input type="text" name="position" id="position" placeholder="Digite seu último cargo" maxlength="40" required>
+            </label>
+            <label for="position-description"> Descrição do cargo: 
+                <input type="text" name="position-description" id="position-description" placeholder="Descreva seu cargo em 500 caracteres" maxlength="500" required>
+            </label>
+            <label for="start-date">Data de início:
+                <input type="text" name="start-date" id="start-date" placeholder="dd/mm/aaaa" value="" required>
+            </label>
+            </fieldset>
+            <input type="checkbox" id="agreement">
+            <label for="agriment">"Você concorda com o uso das informações acima?"</label>
+            <button class="submit-button" type="submit" id="submit-btn" disabled>Enviar</button>
+        </form>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
