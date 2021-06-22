@@ -10,3 +10,22 @@ function createStateOptions() {
     }
 }
 createStateOptions()
+
+function validateDateField () {
+    
+}
+function activeButton () {
+    let enviar = document.getElementById('submit-btn');
+    const checkbox = document.getElementById('agreement');
+    checkbox.addEventListener('change', ativaEnviar)
+    function ativaEnviar () {
+        console.log('chama')
+        if(checkbox.checked != true){
+            enviar.setAttribute('disabled', true)
+        }else{
+            enviar.removeAttribute('disabled')
+        }
+    }
+}
+activeButton ()
+
